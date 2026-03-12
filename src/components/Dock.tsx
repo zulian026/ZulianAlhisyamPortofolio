@@ -64,7 +64,7 @@ function DockItem({
   magnification,
   baseItemSize,
 }: DockItemProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLElement | null>(null);
   const isHovered = useMotionValue(0);
 
   const mouseDistance = useTransform(mouseX, (val) => {
@@ -95,7 +95,7 @@ function DockItem({
     </>
   );
 
-  const sharedProps = {
+  const sharedProps: any = {
     ref,
     style: {
       width: size,
